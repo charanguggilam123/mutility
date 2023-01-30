@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="navbar-header">
+    <a routerLink="/" class="navbar-brand">Multility</a>
+  </div>
+
+  <div >
+    <ul class="utilities no-list-style">
+      <li><a class="nav-btn is-rounded" role="button" routerLink="json-lint" routerLinkActive="is-active">Json lint</a></li>
+      <li><a class="nav-btn is-rounded" role="button" routerLink="/b64-encode" routerLinkActive="is-active">base64 encoder</a></li>
+      <li><a class="nav-btn is-rounded" role="button" routerLink="generate-csr" routerLinkActive="is-active">CSR generator</a></li>
+      <li><a class="nav-btn is-rounded" role="button" routerLink="jwt-decode" routerLinkActive="is-active">JWT decoder</a></li>
+      <li><a class="nav-btn is-rounded" role="button" routerLink="paginate-data" routerLinkActive="is-active">Data paginator</a></li>
+    </ul>
+  </div>
+
+  <div class="btn-group dropdown">
+      <button style="cursor: pointer;" class="dropdown-toggle is-rounded" data-bs-toggle="dropdown">
+        Manage<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li ><a class="dropdown-item"  [routerLink]="['/contact-us']">Contact</a></li>
+        <li><a class="dropdown-item" href="http://www.google.com" target="_blank">Rate</a></li>
+      </ul>
+  </div>
+
+
+  <div class="search-bar">
+    <input type="text" name="Search" appInputValidation placeholder="Search">
+  </div>
+</nav>

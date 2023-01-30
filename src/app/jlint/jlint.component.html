@@ -1,0 +1,26 @@
+<div class="jlint">
+  <textarea id="w3review" name="jlint-input" placeholder="Enter json input here" rows="10" cols="30" #input>
+    </textarea>
+  <div class="buttons">
+    <button class="btn btn-success" (click)="onPrettify(input.value)">Prettify!</button>
+    <select>
+      <option disabled selected value [ngValue]="null"> -- Select any  -- </option>
+      <option *ngFor="let option of options" [value]="option.value">{{option.name}}</option>
+  </select>
+    <button class="btn btn-success">Tab Width</button>
+  </div>
+  <!-- <textarea id="w3review" name="jlint-output" rows="4" cols="50">{{transFormedJson | json}} -->
+    <div>
+      <div class="tool-tip">
+        <button class="copy-btn btn" (click)="copy()">
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+          <p>Copy</p>
+        </button>
+      </div>
+      <textarea spellcheck="false" id="lint-output" name="lint-output" rows="10" cols="70">{{transFormedJson | prettyPrintJson}}
+      </textarea>
+
+    </div>
+
+</div>
+<p style="background-color:rgb(207, 86, 86) ;" *ngIf="error">{{error}}</p>

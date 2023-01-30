@@ -1,0 +1,37 @@
+.navbar{
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.utilities{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  /* justify-content: space-between; */
+
+}
+
+.is-rounded{
+  border-radius: 9999px;
+
+}
+
+.nav-btn{
+  background-color: transparent;
+  border: 3px solid transparent;
+  text-decoration: none;
+  color:black
+
+}
+
+.is-active{
+  background-color: aliceblue;
+}
+
+.no-list-style {
+  list-style: none;
+}
+
+

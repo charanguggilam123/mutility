@@ -1,0 +1,34 @@
+<div class="jwt-container">
+  <div>
+    <textarea class="jwt-input" placeholder="Enter the token details here"
+    cols="50" [(ngModel)]="token"></textarea>
+    <h2 style="background-color: aliceblue;" *ngIf="response?.signValid===true">Sign Valid</h2>
+    <h2 style="background-color:rgb(247, 95, 95) ;" *ngIf="response?.signValid===false">Sign Invalid</h2>
+  </div>
+  <div class="col-buttons">
+    <button class="btn btn-success" (click)="decodeToken()">Decode</button>
+
+    <button [disabled]="!secret" class="btn btn-success" (click)="verifySignature()">Verify</button>
+  </div>
+  <div class="jwt-decode-output">
+    <div class="jwt-header">
+      <p class="text-line">Header <span style="color: gray ;">Algorithm and token type</span></p>
+      <p *ngIf="response">{{response.headers | json}}</p>
+
+    </div>
+    <div class="jwt-payload">
+      <p class="text-line">Payload <span style="color: gray ;">Data</span></p>
+      <!-- <div class="jwt-output-payload" *ngIf="response">{{response.payload | prettyPrintJson}}</div> -->
+      <textarea *ngIf="response" id="lint-output" name="lint-output">{{response.payload | prettyPrintJson}}
+      </textarea>
+    </div>
+    <div class="jwt-sign-validator">
+      <p class="text-line">Verify Signature</p>
+      <p>base64UrlEncode(header) + "." +</p>
+      <p>base64UrlEncode(payload),</p>
+      <input type="text" name="secret" placeholder="Enter key to verify signature" [(ngModel)]="secret">
+      <p>) <input type="checkbox" (change)="toggleEncodeFlag()"><b>secret base 64 encoded</b></p>
+    </div>
+
+  </div>
+</div>

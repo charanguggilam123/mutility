@@ -1,0 +1,21 @@
+.encoder{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+button{
+  margin-bottom: 10px;
+}
+
+textarea{
+  width: 40%;
+  height: 100%;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,27 @@
+<p appHighlight>practice-things works!</p>
+<div *ngFor="let user of users">
+  <p>{{user}}</p>
+</div>
+
+<p *ngIf="flag;else other_content">flag is true</p>
+<ng-template #other_content>other content here...</ng-template>
+<!-- Impl after angular 8. old one holds good but this is a option -->
+<ng-template [ngIf]="flag" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock">
+  This content is never showing
+</ng-template>
+<ng-template #thenBlock>
+  Content to render when condition is true.
+</ng-template>
+<ng-template #elseBlock>
+  Content to render when condition is false.
+</ng-template>
+
+
+<div [ngSwitch]="number">
+  <p *ngSwitchCase="1">First</p>
+  <p *ngSwitchCase="2">Sec</p>
+  <p *ngSwitchCase="3">Third</p>
+  <p *ngSwitchCase="4">Fourth</p>
+  <p *ngSwitchDefault>Zero</p>
+</div>
+

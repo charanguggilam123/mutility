@@ -1,0 +1,10 @@
+<div class="encoder">
+  <textarea name="encoder-input" placeholder="Enter data to transform:" rows="10" ></textarea>
+  <div class="buttons">
+    <button class="btn btn-success" (click)="onSubmit('input.value',true)">Encode</button>
+    <button class="btn btn-success" (click)="onSubmit('input.value',false)">Decode</button>
+  </div>
+  <!-- <textarea id="w3review" name="jlint-output" rows="4" cols="50">{{transFormedJson | json}} -->
+    <textarea name="encoder-output" rows="10">{{transformed}}
+  </textarea>
+</div>

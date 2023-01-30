@@ -1,0 +1,52 @@
+.jlint{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+}
+
+button{
+  margin: 10px;
+}
+
+.copy-btn{
+  /* border-radius: 20px; */
+  margin: 0%;
+  width: 20px;
+  height: 20px;
+  padding: 0%;
+  font-size: xx-small;
+
+  position: absolute;
+  top: 15%;
+  left: 90%;
+}
+
+.copy-btn > p {
+  color: red;
+}
+textarea{
+  height: 100%;
+}
+
+
+.tool-tip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tool-tip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

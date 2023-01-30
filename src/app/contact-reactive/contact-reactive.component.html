@@ -1,0 +1,53 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+  <div [formGroupName]="'userData'">
+    <div class="form-group mb-3 row">
+      <label class="col-sm-2" for="name">Name: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="name" id="name" [formControlName]="'name'" >
+        <span *ngIf="contactForm.get('userData')?.get('name')?.hasError('required')&& contactForm.get('userData')?.get('name')?.touched" id="passwordHelpInline" class="form-text">
+          Name is required
+        </span>
+        <span *ngIf="contactForm.get('userData')?.get('name')?.hasError('invalidUserName') && contactForm.get('userData')?.get('name')?.touched" id="passwordHelpInline" class="form-text">
+          Enter a Valid Name
+        </span>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <label class="col-sm-2" for="gender">Gender: </label>
+      <div class="col-sm-2" *ngFor="let gender of genders">
+        <input type="radio" name="gender" id="gender" formControlName="gender" [value]="gender"> {{gender | uppercase}}
+      </div>
+    </div>
+
+    <div class="form-group mb-3  row">
+      <label class="col-sm-2" for="email">Email: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="email" id="email"
+         formControlName="email">
+         <span *ngIf="!contactForm.get('userData')?.get('email')?.valid && contactForm.get('userData')?.get('email')?.touched" id="passwordHelpInline" class="form-text">
+          Please Enter a valid email
+        </span>
+        <span *ngIf="!contactForm.get('userData')?.get('email')?.valid && contactForm.get('userData')?.get('email')?.touched" id="passwordHelpInline" class="form-text">
+          Please Enter a valid email
+        </span>
+      </div>
+  </div>
+  </div>
+  <div class="form-group mb-3  row">
+    <label class="col-sm-2" for="summary">Summary: </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="summary" id="summary" formControlName="summary">
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label class="col-sm-2" for="description">Description: </label>
+    <div class="col-sm-10">
+      <textarea class="form-control" name="description" id="description" formControlName="description"></textarea>
+    </div>
+  </div>
+
+  <button [disabled]="contactForm.valid" type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-success" (click)="onReset()">Reset</button>
+  </form>
