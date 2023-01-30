@@ -10,6 +10,7 @@ Detailed Description:
 4. paginate data: To be implemented
 
 Concepts used/covered:
+
 0. String interpolation,local references and basics like property and binding
 1. components: every utility is developed as its own components
 2. directives: implemented custom directive to add only alpha numeric data in a input field(handled both keypress and paste events). Also created a practice component to do some hands-on on structural directives( ngIf,ngFor,ngSwitch,ngIfThen,ngIfElse etc.)
