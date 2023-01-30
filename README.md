@@ -11,7 +11,7 @@ Detailed Description:
 
 Concepts used/covered:
 
-0. String interpolation,local references and basics like property and binding
+0. String interpolation,local references and basics like property and event binding
 1. components: every utility is developed as its own components
 2. directives: implemented custom directive to add only alpha numeric data in a input field(handled both keypress and paste events). Also created a practice component to do some hands-on on structural directives( ngIf,ngFor,ngSwitch,ngIfThen,ngIfElse etc.)
 3. pipe: used in-built pipe and also created a custom pipe used in json lint component
@@ -24,8 +24,9 @@ GOTCHA/s
 2. when using forms espicially template driven if form obj in component and html are not matching, check spellings and hierarchy and see if for all inputs you have mentioned ngModel directive or not
 
 Further:
-1. implement a more robust applications using guards modules with lazy loading observable and state management using ngrx
-2. implement endpoints of csr generator and paginate data
+1. implement a more robust applications using guards modules with lazy loading observable. [tv-share](https://github.com/charanguggilam123/gsc-tv-share)
+2. state management using ngrx
+3. complete implementation of endpoints of csr generator and paginate data
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
