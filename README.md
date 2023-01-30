@@ -10,13 +10,17 @@ Detailed Description:
 4. paginate data: To be implemented
 
 Concepts used/covered:
-
+0. String interpolation,local references and basics like property and binding
 1. components: every utility is developed as its own components
 2. directives: implemented custom directive to add only alpha numeric data in a input field(handled both keypress and paste events). Also created a practice component to do some hands-on on structural directives( ngIf,ngFor,ngSwitch,ngIfThen,ngIfElse etc.)
 3. pipe: used in-built pipe and also created a custom pipe used in json lint component
 4. routing: all components are accessed via routes
 5. forms: template driven and reactive forms with async validator
 6. HTTP calls and Interceptor: Implemented interceptor to log outgoing requests and did http calls to read data from backend and display. In Jwt decode component
+
+GOTCHA/s
+1. viewChild if used in onInit lifecycle hook, have to add static property inside annotation
+2. when using forms espicially template driven if form obj in component and html are not matching, check spellings and hierarchy and see if for all inputs you have mentioned ngModel directive or not
 
 Further:
 1. implement a more robust applications using guards modules with lazy loading observable and state management using ngrx
